@@ -1,0 +1,173 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{%static 'css/base.css'%}">
+<div id="carousel-ex" class="carousel slide carousel-fade pt-4" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li class="active" data-target="#carousel-ex" data-slide-to="0"></li>
+    <li data-target="#carousel-ex" data-slide-to="1"></li>
+    <li data-target="#carousel-ex" data-slide-to="2"></li>
+    <li data-target="#carousel-ex" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+
+    <div class="carousel-item active">
+      <div class="view" style="background-image: url('https://by.s.bekhost.com/bekker-by/uploads/content/676306288aeb69f0412cc425becdbccf.jpg');
+      background-repeat: no-repeat; background-size: cover;">
+        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+          <div class="text-center white-text mx-5 wow fadeIn">
+
+            <h1 class="mb-4">
+              <strong>Ivanka House</strong>
+            </h1>
+            
+            <p>
+              <strong>Продукция которая дарит тепло и уют.</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>Вся наша продукция выполнена в ручную с использованием только качественных ингредиентов.</strong>
+            </p>
+            <a href="{% url 'aboutus' %}" class="btn btn-outline-white btn-lg">
+              Подробнее... <i class="fa fa-graduation-cap ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="view" style="background-image: url('https://www.ogorod.ru/images/cache/660x400/crop/images%7Ccms-image-000051997.jpg');
+      background-repeat: no-repeat; background-size: cover;">
+        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+          <div class="text-center white-text mx-5 wow fadeIn">
+
+            <h1 class="mb-4">
+              <strong>Ivanka House</strong>
+            </h1>
+            
+            <p>
+              <strong>Продукция которая дарит тепло и уют.</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>Вся наша продукция выполнена в ручную с использованием только качественных ингредиентов.</strong>
+            </p>
+            <a href="{% url 'aboutus' %}" class="btn btn-outline-white btn-lg">
+              Подробнее... <i class="fa fa-graduation-cap ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="view" style="background-image: url('https://www.justukr.com/files/uploads/lavanda.jpg');
+      background-repeat: no-repeat; background-size: cover;">
+        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+          <div class="text-center white-text mx-5 wow fadeIn">
+
+            <h1 class="mb-4">
+              <strong>Ivanka House</strong>
+            </h1>
+            
+            <p>
+              <strong>Продукция которая дарит тепло и уют.</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>Вся наша продукция выполнена в ручную с использованием только качественных ингредиентов.</strong>
+            </p>
+            <a href="{% url 'aboutus' %}" class="btn btn-outline-white btn-lg">
+              Подробнее... <i class="fa fa-graduation-cap ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="view" style="background-image: url('https://blog.florium.ua/wp-content/uploads/bunch-lavender-1366x768.jpg');
+      background-repeat: no-repeat; background-size: cover;">
+        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+          <div class="text-center white-text mx-5 wow fadeIn">
+
+            <h1 class="mb-4">
+              <strong>Ivanka House</strong>
+            </h1>
+            
+            <p>
+              <strong>Продукция которая дарит тепло и уют.</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>Вся наша продукция выполнена в ручную с использованием только качественных ингредиентов.</strong>
+            </p>
+            <a href="{% url 'aboutus' %}" class="btn btn-outline-white btn-lg">
+              Подробнее... <i class="fa fa-graduation-cap ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <a href="#carousel-ex" class="carousel-control-prev" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a href="#carousel-ex" class="carousel-control-next" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+</div>
+<main>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-color lighten-3 mt-3 mb-5">
+      <span class="navbar-brand"> Наши продукты ручной работы:</span>
+      <form action="" class="form-inline">
+      </form>
+    </nav>
+
+    <section class="text-center mb-4">
+      <div class="row wow fadeIn">
+        {% for product in products %}
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay"> 
+              <style>
+                .card-img-top{
+                  height: 300px;
+                }
+              </style>
+              <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no_image.png' %}{% endif %}">
+              <a href="{{ product.get_absolute_url }}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <style>
+              .card-body.text-center{
+                height: 130px;
+              }
+            </style>
+            <div class="card-body text-center">
+
+              <h5>
+                <strong>
+                  <a href="{{ product.get_absolute_url }}" class="purple-text">{{ product.name }}</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>{{ product.price }}<span> руб.</span></strong>
+              </h4> 
+            </div>      
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+
+{% endblock %}

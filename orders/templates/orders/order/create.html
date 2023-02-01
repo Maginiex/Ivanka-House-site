@@ -1,0 +1,64 @@
+{% extends "shop/base.html" %}
+
+{% block content %}
+
+    <div class="order-info" style="margin-right: 20px;margin-top: 80px;">
+        <h3>Ваш заказ</h3>
+        <ul>
+            {% for item in cart %}
+                <li>
+                    {{ item.quantity }}x {{ item.product.name }}
+                    <span>{{ item.total_price }}<span> руб.</span></span>
+                </li>
+            {% endfor %}
+        </ul>
+        <p>Всего:{{ cart.get_total_price }} <span> руб.</span></p>
+    </div>
+    <style>
+        @media screen and (min-width: 320px) { 
+            .form{
+
+                margin-right: 200px;
+            }
+            
+            }    
+        @media screen and (min-width: 1920px) { 
+            .form{
+
+                margin-left: 650px;
+            }
+            
+            }
+        @media screen and (min-width: 1024px) { 
+            .form{
+
+                margin-left: 320px;
+            }
+            
+            }
+        @media screen and (min-width: 1440px) { 
+            .form{
+
+                margin-left: 550px;
+            }
+            
+            } 
+            
+        @media screen and (min-width: 2560px) { 
+            .form{
+
+                margin-left: 1100px;
+            }
+            
+            }  
+    
+    </style>
+    <div class="form">
+        <form action="{% url 'orders:order_create' %}" method="post" class="order-form" style="margin: 26px; margin-top: 80px;">
+    
+            {{ form.as_p }}
+            <p><input type="submit" value="Place order"></p>
+            {% csrf_token %}
+    </form>
+    </div>  
+{% endblock %}

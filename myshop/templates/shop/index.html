@@ -1,0 +1,553 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div id="carousel-ex" class="carousel slide carousel-fade pt-4" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li class="active" data-target="#carousel-ex" data-slide-to="0"></li>
+    <li data-target="#carousel-ex" data-slide-to="1"></li>
+    <li data-target="#carousel-ex" data-slide-to="2"></li>
+    <li data-target="#carousel-ex" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+
+    <div class="carousel-item active">
+      <div class="view" style="background-image: url('https://by.s.bekhost.com/bekker-by/uploads/content/676306288aeb69f0412cc425becdbccf.jpg');
+      background-repeat: no-repeat; background-size: cover;">
+        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+          <div class="text-center white-text mx-5 wow fadeIn">
+
+            <h1 class="mb-4">
+              <strong>Ivanka House</strong>
+            </h1>
+            
+            <p>
+              <strong>Продукция которая дарит тепло и уют.</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>Вся наша продукция выполнена в ручную с использованием только качественных ингредиентов.</strong>
+            </p>
+            <a href="{% url 'aboutus' %}" class="btn btn-outline-white btn-lg">
+              Подробнее... <i class="fa fa-graduation-cap ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="view" style="background-image: url('https://www.ogorod.ru/images/cache/660x400/crop/images%7Ccms-image-000051997.jpg');
+      background-repeat: no-repeat; background-size: cover;">
+        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+          <div class="text-center white-text mx-5 wow fadeIn">
+
+            <h1 class="mb-4">
+              <strong>Ivanka House</strong>
+            </h1>
+            
+            <p>
+              <strong>Продукция которая дарит тепло и уют.</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>Вся наша продукция выполнена в ручную с использованием только качественных ингредиентов.</strong>
+            </p>
+            <a href="{% url 'aboutus' %}" class="btn btn-outline-white btn-lg">
+              Подробнее... <i class="fa fa-graduation-cap ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="view" style="background-image: url('https://www.justukr.com/files/uploads/lavanda.jpg');
+      background-repeat: no-repeat; background-size: cover;">
+        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+          <div class="text-center white-text mx-5 wow fadeIn">
+
+            <h1 class="mb-4">
+              <strong>Ivanka House</strong>
+            </h1>
+            
+            <p>
+              <strong>Продукция которая дарит тепло и уют.</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>Вся наша продукция выполнена в ручную с использованием только качественных ингредиентов.</strong>
+            </p>
+            <a href="{% url 'aboutus' %}" class="btn btn-outline-white btn-lg">
+              Подробнее... <i class="fa fa-graduation-cap ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="view" style="background-image: url('https://blog.florium.ua/wp-content/uploads/bunch-lavender-1366x768.jpg');
+      background-repeat: no-repeat; background-size: cover;">
+        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+          <div class="text-center white-text mx-5 wow fadeIn">
+
+            <h1 class="mb-4">
+              <strong>Ivanka House</strong>
+            </h1>
+            
+            <p>
+              <strong>Продукция которая дарит тепло и уют.</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>Вся наша продукция выполнена в ручную с использованием только качественных ингредиентов.</strong>
+            </p>
+            <a href="{% url 'aboutus' %}" class="btn btn-outline-white btn-lg">
+              Подробнее... <i class="fa fa-graduation-cap ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <a href="#carousel-ex" class="carousel-control-prev" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a href="#carousel-ex" class="carousel-control-next" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+</div>
+
+<main>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-color lighten-3 mt-3 mb-5">
+      <span class="navbar-brand"> Наши продукты ручной работы:</span>
+      <form action="" class="form-inline">
+      </form>
+    </nav>
+
+    <section class="text-center mb-4">
+      <div class="row wow fadeIn">
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/lavender-soap.jpg'%}" alt="lavender-soap">
+              <a href="{% url 'soap' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'soap' %}" class="grey-text">
+                <h5>Мыло</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'soap' %}" class="purple-text">Мыло лавандовое 120-125гр.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong> 15руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/candle.jpg'%}" alt="candle">
+              <a href="{% url 'candle' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'candle' %}" class="grey-text">
+                <h5>Свеча</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'candle' %}" class="purple-text">Арома свеча из соевого воска 125мл.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>25 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/lavender.jpg'%}" alt="lavender">
+              <a href="{% url 'lavender' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'lavender' %}" class="grey-text">
+                <h5>Букет</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'lavender' %}" class="purple-text">Букет лаванды</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>35 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/salt.jpg'%}" alt="salt">
+              <a href="{% url 'salt' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'salt' %}" class="grey-text">
+                <h5>Соль</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'salt' %}" class="purple-text">Гималайская соль для ванн с цветками лаванды 500гр.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>25 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="row wow fadeIn">
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/cream.jpg' %}" alt="cream">
+              <a href="{% url 'cream' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'cream' %}" class="grey-text">
+                <h5>Крем</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'cream' %}" class="purple-text">Крем суфле для душа 100мл.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>25 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/sachet.jpg'%}" alt="sachet">
+              <a href="{% url 'sachet' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'sachet' %}" class="grey-text">
+                <h5>Саше</h5>
+              </a>
+              <h5>
+                <strong>
+                  <a href="{% url 'sachet' %}" class="purple-text">Саше с цветками лаванды</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>15 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/butter.jpg'%}" alt="butter">
+              <a href="{% url 'butter' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'butter' %}" class="grey-text">
+                <h5>Крем</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'butter' %}" class="purple-text">Баттер лавандовый для рук и тела 100мл.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>25 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/scrab.jpg'%}" alt="scrab">
+              <a href="{% url 'scrab' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'scrab' %}" class="grey-text">
+                <h5>Скраб</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'scrab' %}" class="purple-text">Масляно-сахарный скраб 250гр.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>25 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row wow fadeIn">
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/gidro.jpg'%}" alt="gidro">
+              <a href="{% url 'gidro' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'gidro' %}" class="grey-text">
+                <h5>Гидролат</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'gidro' %}" class="purple-text">Гидролат лаванды 100мл.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>25 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/dez.jpg'%}" alt="dez">
+              <a href="{% url 'dez' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'dez' %}" class="grey-text">
+                <h5>Дезодорант</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'dez' %}" class="purple-text">Дезодорант 100мл.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>25 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/shampoo.jpg'%}" alt="lavender-soap">
+              <a href="{% url 'shampoo' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'shampoo' %}" class="grey-text">
+                <h5>Шампунь</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'shampoo' %}" class="purple-text">Твердый шампунь 50гр.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>25 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/conder.jpg'%}" alt="lavender-soap">
+              <a href="{% url 'conder' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'conder' %}" class="grey-text">
+                <h5>Бальзам</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'conder' %}" class="purple-text">Твердый бальзам для волос 50гр.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>25 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row wow fadeIn">
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/perfume.jpg'%}" alt="lavender-soap">
+              <a href="{% url 'perfume' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'perfume' %}" class="grey-text">
+                <h5>Духи</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'perfume' %}" class="purple-text">Сухие духи 15мл.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>20 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/oil.jpg'%}" alt="oil">
+              <a href="{% url 'oil' %}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'oil' %}" class="grey-text">
+                <h5>Масло</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'oil' %}" class="purple-text">Эфирное масло лаванды 10мл.</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>30 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-mb-6 mb-4">
+          <div class="card">
+            <div class="view owerlay">
+              <img class="card-img-top" src="{%static 'images_dev/lipstick.jpg'%}" alt="lavender-soap">
+              <a href="{% url 'lipstick'%}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+            <div class="card-body text-center">
+              <a href="{% url 'lipstick'%}" class="grey-text">
+                <h5>Бальзам</h5>
+              </a>
+
+              <h5>
+                <strong>
+                  <a href="{% url 'lipstick'%}" class="purple-text">Бальзам для губ</a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold text">
+                <strong>15 руб.</strong>
+              </h4> 
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <nav class="d-flex justify-content-center wow fadeIn">
+      <ul class="pagination pg-purple">
+        <li class="page-item disabled">
+          <a href="" class="page-link" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item active">
+          <a href="" class="page-link" aria-label="Previous">
+            <span aria-hidden="true">1</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a href="" class="page-link" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</main>
+{% endblock %}
